@@ -5,11 +5,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "user")
 
-public class user {
+@Data // get ans setter 
+@Builder 
+@NoArgsConstructor // constructor sin argumentos o vacio 
+@AllArgsConstructor // constructor con argumenos  
 
+public class user {
+    
    	@Id
     @GeneratedValue(strategy = GenerationType.UUID)// generador de id automatico 
 
@@ -46,107 +55,107 @@ public class user {
 	private String telefono;
 
 
-    public user() {  // un costructor publico, para instanciar o crear objetos de tipo userModel 
-		super();
-	}; 
+    // public user() {  // un costructor publico, para instanciar o crear objetos de tipo userModel 
+	// 	super(); 
+	// }; 
 
-    public user( String id_Usuario, String rol,String primer_Nombre, String segundo_Nombre, String primer_Apellido, 
-                      String segundo_Apellido, String email, String clave, String confirmacion_clave, String telefono ){
+    // public user( String id_Usuario, String rol,String primer_Nombre, String segundo_Nombre, String primer_Apellido, 
+    //                   String segundo_Apellido, String email, String clave, String confirmacion_clave, String telefono ){
 
-                        super(); //
+    //                     super(); //
 
-                        this.id_Usuario= id_Usuario;
-                        this.rol=rol;                               // source action: para generar los set get, costructores automaticos 
-                        this.primer_Nombre= primer_Nombre;
-                        this.segundo_Nombre=segundo_Nombre;
-                        this.primer_Apellido=primer_Apellido;
-                        this.segundo_Apellido=segundo_Apellido;
-                        this.email=email;
-                        this.clave=clave;
-                        this.confirmacion_clave=confirmacion_clave; 
-                        this.telefono=telefono; 
-                      }
+    //                     this.id_Usuario= id_Usuario;
+    //                     this.rol=rol;                               // source action: para generar los set get, costructores automaticos 
+    //                     this.primer_Nombre= primer_Nombre;
+    //                     this.segundo_Nombre=segundo_Nombre;
+    //                     this.primer_Apellido=primer_Apellido;
+    //                     this.segundo_Apellido=segundo_Apellido;
+    //                     this.email=email;
+    //                     this.clave=clave;
+    //                     this.confirmacion_clave=confirmacion_clave; 
+    //                     this.telefono=telefono; 
+    //                   }
 
-    public String getId_Usuario() {
-        return id_Usuario;
-    }
+    // public String getId_Usuario() {
+    //     return id_Usuario;
+    // }
     
-    public String getRol() {
-        return rol;
-    }
+    // public String getRol() {
+    //     return rol;
+    // }
 
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
+    // public void setRol(String rol) {
+    //     this.rol = rol;
+    // }
 
 
-    public void setId_Usuario(String id_Usuario) {
-        this.id_Usuario = id_Usuario;
-    }
+    // public void setId_Usuario(String id_Usuario) {
+    //     this.id_Usuario = id_Usuario;
+    // }
 
-    public String getPrimer_Nombre() {
-        return primer_Nombre;
-    }
+    // public String getPrimer_Nombre() {
+    //     return primer_Nombre;
+    // }
 
-    public void setPrimer_Nombre(String primer_Nombre) {
-        this.primer_Nombre = primer_Nombre;
-    }
+    // public void setPrimer_Nombre(String primer_Nombre) {
+    //     this.primer_Nombre = primer_Nombre;
+    // }
 
-    public String getSegundo_Nombre() {
-        return segundo_Nombre;
-    }
+    // public String getSegundo_Nombre() {
+    //     return segundo_Nombre;
+    // }
 
-    public void setSegundo_Nombre(String segundo_Nombre) {
-        this.segundo_Nombre = segundo_Nombre;
-    }
+    // public void setSegundo_Nombre(String segundo_Nombre) {
+    //     this.segundo_Nombre = segundo_Nombre;
+    // }
 
-    public String getPrimer_Apellido() {
-        return primer_Apellido;
-    }
+    // public String getPrimer_Apellido() {
+    //     return primer_Apellido;
+    // }
 
-    public void setPrimer_Apellido(String primer_Apellido) {
-        this.primer_Apellido = primer_Apellido;
-    }
+    // public void setPrimer_Apellido(String primer_Apellido) {
+    //     this.primer_Apellido = primer_Apellido;
+    // }
 
-    public String getSegundo_Apellido() {
-        return segundo_Apellido;
-    }
+    // public String getSegundo_Apellido() {
+    //     return segundo_Apellido;
+    // }
 
-    public void setSegundo_Apellido(String segundo_Apellido) {
-        this.segundo_Apellido = segundo_Apellido;
-    }
+    // public void setSegundo_Apellido(String segundo_Apellido) {
+    //     this.segundo_Apellido = segundo_Apellido;
+    // }
 
-    public String getEmail() {
-        return email;
-    }
+    // public String getEmail() {
+    //     return email;
+    // }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
 
-    public String getClave() {
-        return clave;
-    }
+    // public String getClave() {
+    //     return clave;
+    // }
 
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
+    // public void setClave(String clave) {
+    //     this.clave = clave;
+    // }
 
-    public String getConfirmacion_clave() {
-        return confirmacion_clave;
-    }
+    // public String getConfirmacion_clave() {
+    //     return confirmacion_clave;
+    // }
 
-    public void setConfirmacion_clave(String confirmacion_clave) {            
-        this.confirmacion_clave = confirmacion_clave;
-    }
+    // public void setConfirmacion_clave(String confirmacion_clave) {            
+    //     this.confirmacion_clave = confirmacion_clave;
+    // }
 
-    public String getTelefono() {
-        return telefono;
-    }
+    // public String getTelefono() {
+    //     return telefono;
+    // }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+    // public void setTelefono(String telefono) {
+    //     this.telefono = telefono;
+    // }
 
    
 }
